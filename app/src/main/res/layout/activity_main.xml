@@ -71,11 +71,13 @@
         </LinearLayout>
     </LinearLayout>
     <TextView
+        android:id="@+id/tvcalc"
         android:layout_width="match_parent"
         android:layout_height="246dp"
         android:textSize="40sp"
-        android:textColor="@color/black"
-        android:ems="30" />
+        android:textColor="@color/white"
+        android:ems="30"
+        android:background="@color/black"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="82dp"
@@ -120,7 +122,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/black"
                 android:textColor="@color/orange"
-                android:text="@string/percentage"
+                android:text="@string/percent"
                 android:textSize="40sp"
                 style="?android:attr/buttonBarButtonStyle">
 
@@ -337,57 +339,59 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            tools:ignore="UselessParent">
+            tools:ignore="UselessParent"
+            android:background="@color/black">
 
             <Button
-                android:id="@+id/orien"
+                android:id="@+id/btnorien"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="102.857dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:background="@color/black"
-                android:textColor="@color/blue"
+                android:gravity="center"
                 android:text="@string/l"
+                android:textColor="@color/blue"
+                android:textSize="40sp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="102.857dp"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/_0"
+                android:textColor="@color/white"
                 android:textSize="40sp"
+                tools:ignore="HardcodedText"
                 style="?android:attr/buttonBarButtonStyle">
 
             </Button>
 
-            <Button
-                android:id="@+id/btnzero"
-                android:layout_width="102.857dp"
-                android:gravity="center"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:textColor="@color/white"
-                android:text="@string/_0"
-                android:textSize="40sp"
-                style="?android:attr/buttonBarButtonStyle"
-                tools:ignore="HardcodedText">
-
-            </Button>
             <Button
                 android:id="@+id/btndot"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="102.857dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
                 android:background="@color/black"
-                android:textColor="@color/white"
+                android:gravity="center"
                 android:text="@string/dot"
-                android:textSize="40sp"
-                style="?android:attr/buttonBarButtonStyle">
+                android:textColor="@color/white"
+                android:textSize="40sp">
 
             </Button>
 
             <Button
                 android:id="@+id/btnequal"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/orange"
                 android:gravity="center"
                 android:text="@string/equal"
                 android:textColor="@color/white"
-                android:textSize="50sp"
-                style="?android:attr/buttonBarButtonStyle">
+                android:textSize="50sp">
 
             </Button>
         </LinearLayout>
