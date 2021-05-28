@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="c">C</string>
+    <string name="backspace"><![CDATA[<--]]></string>
+    <string name="percentage">%</string>
+    <string name="divie">/</string>
+    <string name="divide">/</string>
+    <string name="currency">Currency</string>
+    <string name="length">Length</string>
+    <string name="area">Area</string>
+    <string name="age">Age</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="multiply">*</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="minus">-</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="_3">3</string>
+    <string name="plus">+</string>
+    <string name="orientation">\\_/</string>
+    <string name="_0">0</string>
+    <string name="dot">.</string>
+    <string name="equal">=</string>
+    <string name="l">L</string>
+</resources>
