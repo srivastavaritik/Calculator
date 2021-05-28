@@ -1,8 +1,6 @@
 package co.riteck.calculator;
 
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -27,139 +25,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initControlListener() {
-        btn0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onNumberButtonClicked("0");
-            }
-        });
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onNumberButtonClicked("1");
-            }
-        });
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onNumberButtonClicked("2");
-            }
-        });
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onNumberButtonClicked("3");
-            }
-        });
-        btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onNumberButtonClicked("4");
-            }
-        });
-        btn5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onNumberButtonClicked("5");
-            }
-        });
-        btn6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onNumberButtonClicked("6");
-            }
-        });
-        btn7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onNumberButtonClicked("7");
-            }
-        });
-        btn8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onNumberButtonClicked("8");
-            }
-        });
-        btn9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onNumberButtonClicked("9");
-            }
-        });
-        btndot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onNumberButtonClicked(".");
-            }
-        });
-        btnorien.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onOrienButtonClicked();
-            }
-        });
+        btn0.setOnClickListener(v -> onNumberButtonClicked("0"));
+        btn1.setOnClickListener(v -> onNumberButtonClicked("1"));
+        btn2.setOnClickListener(v -> onNumberButtonClicked("2"));
+        btn3.setOnClickListener(v -> onNumberButtonClicked("3"));
+        btn4.setOnClickListener(v -> onNumberButtonClicked("4"));
+        btn5.setOnClickListener(v -> onNumberButtonClicked("5"));
+        btn6.setOnClickListener(v -> onNumberButtonClicked("6"));
+        btn7.setOnClickListener(v -> onNumberButtonClicked("7"));
+        btn8.setOnClickListener(v -> onNumberButtonClicked("8"));
+        btn9.setOnClickListener(v -> onNumberButtonClicked("9"));
+        btndot.setOnClickListener(v -> onNumberButtonClicked("."));
 
-        btnclearall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onClearButtonClicked();
-            }
-        });
-        btnminus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                onOperatorButtonClicked("-");
-            }
-        });
-        btnplus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onOperatorButtonClicked("+");
-            }
-        });
-        btnmultiply.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onOperatorButtonClicked("*");
-            }
-        });
-        btndivide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onOperatorButtonClicked("/");
-            }
 
-        });
-        btnpercent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onOperatorButtonClicked("%");
-            }
+        btnclearall.setOnClickListener(v -> onClearButtonClicked());
+        btnminus.setOnClickListener(v -> onOperatorButtonClicked("-"));
+        btnplus.setOnClickListener(v -> onOperatorButtonClicked("+"));
+        btnmultiply.setOnClickListener(v -> onOperatorButtonClicked("*"));
+        btndivide.setOnClickListener(v -> onOperatorButtonClicked("/"));
+        btnpercent.setOnClickListener(v -> onOperatorButtonClicked("%"));
+        btnbackspace.setOnClickListener(v -> onBackspaceButtonClicked());
 
-        });
-        btnbackspace.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackspaceButtonClicked();
-            }
-
-        });
-
-        btnequal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onEqualButtonClicked();
-            }
-        });
+        btnequal.setOnClickListener(v -> onEqualButtonClicked());
 
     }
 
     private void onEqualButtonClicked() {
         double res = 0;
         try {
-            double number = Double.valueOf(tmp);
-            double number2 = Double.valueOf(tvcalc.getText().toString());
+            double number = Double.parseDouble(tmp);
+            double number2 = Double.parseDouble(tvcalc.getText().toString());
             switch (operator) {
                 case "+":
                     res = number + number2;
@@ -204,9 +99,7 @@ public class MainActivity extends AppCompatActivity {
         tvcalc.setText(result);
     }
 
-    private void onOrienButtonClicked() {
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-    }
+
 
 
     private void initControl() {
@@ -238,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
             if (str.length() >=1 ) {
                 str = str.substring(0, str.length() - 1);
                 tvcalc.setText(str);
-            } else if (str.length() <=1 ) {
+            } else {
                 tvcalc.setText("0");
             }
         }
