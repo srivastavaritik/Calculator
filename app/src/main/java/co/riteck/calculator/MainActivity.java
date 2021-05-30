@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     String result;
     String operator;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         initControl();
         initControlListener();
     }
+
+
 
     private void initControlListener() {
         btn0.setOnClickListener(v -> onNumberButtonClicked("0"));
@@ -135,4 +138,6 @@ public class MainActivity extends AppCompatActivity {
                 tvcalc.setText("0");
             }
         }
+
+
 }

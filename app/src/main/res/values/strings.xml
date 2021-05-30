@@ -27,4 +27,13 @@
     <string name="equal">=</string>
     <string name="l">L</string>
     <string name="percent">%</string>
+    <string name="choose_your_birth_date">Choose your birth date</string>
+    <string name="choose_age">choose age</string>
+    <string name="date">Date</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="get_age">Get Age</string>
+    <string name="just_enter_the_date_month_year_click_on_get_age"><![CDATA[Just Enter the Date, Month, Year & Click on Get Age]]></string>
+    <string name="your_age_will_display_here">Your Age will display here</string>
+    <string name="enter_year_of_birth">Enter Year Of Birth</string>
 </resources>
